@@ -10,9 +10,9 @@ app.use(helmet());
 //   console.log(`MIDDLEWARE: ${req.url}`);
 // })
 
-app.use(express.static("./public"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+app.use(express.static("public"));
 
 // app.post("/ajax", (req, res) => {
 //   // console.log(`ajax: ${JSON.stringify(req, null, 2)}`)
