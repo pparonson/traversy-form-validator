@@ -3,58 +3,50 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<link rel="stylesheet" href="./css/style.css"/>
+        <link rel="stylesheet" href="./css/style.css" />
         <title>Form Validator</title>
     </head>
     <body>
-        <div>
-            <div>
-                <h2>Form</h2>
-                <div>
-                    <form id="form" class="form">
-                        <div class="form-control">
-                            <label for="username">Username</label>
-                            <input
-                                type="text"
-                                id="username"
-                                placeholder="Enter username"
-                            />
-                            <div>Error message</div>
-                        </div>
-
-                        <div class="form-control">
-                            <label for="email">Email</label>
-                            <input
-                                type="text"
-                                id="email"
-                                placeholder="Enter email"
-                            />
-                            <div>Error message</div>
-                        </div>
-
-                        <div class="form-control">
-                            <label for="password">Password</label>
-                            <input
-                                type="password"
-                                id="password"
-                                placeholder="Enter password"
-                            />
-                            <div>Error message</div>
-                        </div>
-
-                        <div class="form-control">
-                            <label for="password">Password</label>
-                            <input
-                                type="password"
-                                id="password2"
-                                placeholder="Confirm password"
-                            />
-                            <div>Error message</div>
-                        </div>
-			<div><button type="submit">Submit</button></div>
-                    </form>
+        <div class="container">
+		<div class="title"><h2>Register</h2></div>
+            <form id="form" class="form">
+                <div class="form-control">
+                    <label for="username">Username</label>
+                    <input
+                        type="text"
+                        id="username"
+                        placeholder="Enter username"
+                    />
+                    <div class="error-message">Error message</div>
                 </div>
-            </div>
+
+                <div class="form-control">
+                    <label for="email">Email</label>
+                    <input type="text" id="email" placeholder="Enter email" />
+                    <div class="error-message">Error message</div>
+                </div>
+
+                <div class="form-control">
+                    <label for="password">Password</label>
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Enter password"
+                    />
+                    <div class="error-message">Error message</div>
+                </div>
+
+                <div class="form-control">
+                    <label for="password">Password</label>
+                    <input
+                        type="password"
+                        id="password2"
+                        placeholder="Confirm password"
+                    />
+                    <div class="error-message">Error message</div>
+                </div>
+                <div class="submit-button"><button type="submit">Submit</button></div>
+            </form>
         </div>
     </body>
 </html>
