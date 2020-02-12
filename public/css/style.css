@@ -47,7 +47,7 @@ h2 {
 .form-control input {
     display: block;
     border-color: #f0f0f0;
-    border-radius: 0.125rem;
+    border-radius: 0.25rem;
     width: 100%;
 }
 
@@ -71,4 +71,21 @@ h2 {
     left: 0;
     bottom: 0;
     visibility: hidden;
+}
+
+.error-message.visible {
+    visibility: visible;
+}
+
+.form .submit-button {
+    cursor: pointer;
+    background-color: #3498db;
+    border: 0.0625rem solid #3498db;
+    border-radius: 0.25rem;
+    color: #fff;
+    display: block;
+    font-size: 1rem;
+    margin-top: 0.25rem;
+    padding: 0.125rem 0 0.125rem 0;
+    width: 100%;
 }
