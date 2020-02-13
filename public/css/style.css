@@ -69,7 +69,7 @@ h2 {
     font-size: 0.75rem;
     position: absolute;
     left: 0;
-    bottom: 0;
+    bottom: auto;
     visibility: hidden;
 }
 
