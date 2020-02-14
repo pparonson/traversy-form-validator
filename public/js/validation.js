@@ -9,7 +9,7 @@ function showError(element, message) {
     element.nextSibling.className = "error-message visible ";
     const formControl = element.parentElement;
     formControl.className = "form-control error";
-    // const errorMessage = formControl.childNodes[5];
+
     const [, , , , , errorMessage] = formControl.childNodes;
     errorMessage.className = "error-message visible";
     errorMessage.innerHTML = message;
@@ -18,22 +18,21 @@ function showError(element, message) {
 function showSuccess(element) {
     const formControl = element.parentElement;
     formControl.className = "form-control success";
+
+    const [, , , , , errorMessage] = formControl.childNodes;
+    errorMessage.className = "error-message";
+    errorMessage.innerHTML = "";
 }
+
+const isValidEmail = email => {
+    // test() method executes a search for a match between a regular expression and a specified string. Returns true or false
+    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+};
 
 // event listeners
 form.addEventListener("submit", e => {
     e.preventDefault();
-
-    // switch(expression) {
-    //   case x:
-    //     // code block
-    //     break;
-    //   case y:
-    //     // code block
-    //     break;
-    //   default:
-    //     // code block
-    // }
 
     if (!username.value) {
         showError(username, "Username is required");
@@ -43,6 +42,8 @@ form.addEventListener("submit", e => {
 
     if (!email.value) {
         showError(email, "Email is required");
+    } else if (!isValidEmail(email.value)) {
+        showError(email, "A valid email address is required");
     } else {
         showSuccess(email);
     }

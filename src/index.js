@@ -6,10 +6,6 @@ const app = express();
 // helmet adds security headers
 app.use(helmet());
 
-// app.use("/", (req, res, next) => {
-//   console.log(`MIDDLEWARE: ${req.url}`);
-// })
-
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static("public"));
